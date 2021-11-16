@@ -13,14 +13,12 @@ class DogsModuleBuilder {
     
     func build() -> UIViewController {
         let dogsRemoteDataSource = DogsRemoteDataSourceMock()
-        
-        let dogsService = DogsService(dogsRemoteDataSource: dogsRemoteDataSource)
+        let dogsLocalDataSource = DogsLocalDataSource()
+        let dogsService = DogsService(dogsRemoteDataSource: dogsRemoteDataSource, dogsLocalDataSource: dogsLocalDataSource)
         
         let interactor =  DogsInteractor(dogsService: dogsService)
         
         let presenter = DogsPresenter(interactor: interactor)
-        
-        interactor.presenter = presenter
         
         let viewController = DogsViewController(output: presenter)
         

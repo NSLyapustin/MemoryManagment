@@ -18,11 +18,13 @@ class DogsService: DogsServiceProtocol {
     // MARK: -
     
     let dogsRemoteDataSource: DogsRemoteDataSourceProtocol
+    let dogsLocalDataSource: DogsLocalDataSourceProtocol
     
     // MARK: - Initializators
     
-    init(dogsRemoteDataSource: DogsRemoteDataSourceProtocol) {
+    init(dogsRemoteDataSource: DogsRemoteDataSourceProtocol, dogsLocalDataSource: DogsLocalDataSourceProtocol) {
         self.dogsRemoteDataSource = dogsRemoteDataSource
+        self.dogsLocalDataSource = dogsLocalDataSource
     }
     
     // MARK: - DogsServiceProtocol Methods
