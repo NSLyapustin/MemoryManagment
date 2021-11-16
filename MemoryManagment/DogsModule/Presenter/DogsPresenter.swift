@@ -10,7 +10,7 @@ class DogsPresenter {
     // MARK: - Instance Properties
     
     let interactor: DogsInteractorInput
-    var view: DogsViewInput?
+    weak var view: DogsViewInput?
     
     // MARK: - Initializators
     
@@ -33,4 +33,10 @@ extension DogsPresenter: DogsViewOutput {
             }
         }
     }
+}
+
+    // MARK: - DogsInteractorOutput
+
+extension DogsPresenter: DogsInteractorOutput {
+    
 }

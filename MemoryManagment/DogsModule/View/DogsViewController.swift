@@ -5,6 +5,7 @@
 //  Created by Никита Ляпустин on 15.11.2021.
 //
 
+import Kingfisher
 import UIKit
 
 class DogsViewController: UIViewController {
@@ -57,6 +58,6 @@ class DogsViewController: UIViewController {
 
 extension DogsViewController: DogsViewInput {
     func display(dog: Dog) {
-        dogImageView.image = dog.dogImage
+        dogImageView.kf.setImage(with: URL(string: dog.urlString)!)
     }
 }

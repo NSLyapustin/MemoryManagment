@@ -11,6 +11,6 @@ struct Dog {
     
     // MARK: - Instance Properties
     
-    let dogImage: UIImage?
+    let urlString: String
     
 }

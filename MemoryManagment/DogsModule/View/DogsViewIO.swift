@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol DogsViewInput {
+protocol DogsViewInput: AnyObject {
     func display(dog: Dog)
 }
 

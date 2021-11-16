@@ -11,6 +11,8 @@ class DogsInteractor {
     
     // MARK: - Instance Properties
     
+    var presenter: DogsInteractorOutput?
+    
     // MARK: -
     
     private let dogsService: DogsServiceProtocol

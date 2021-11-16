@@ -20,6 +20,8 @@ class DogsModuleBuilder {
         
         let presenter = DogsPresenter(interactor: interactor)
         
+        interactor.presenter = presenter
+        
         let viewController = DogsViewController(output: presenter)
         
         presenter.view = viewController
