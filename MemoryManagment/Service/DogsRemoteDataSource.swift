@@ -18,10 +18,6 @@ class DogsRemoteDataSourceMock: DogsRemoteDataSourceProtocol {
     
     // MARK: -
     
-    private var lastCompletion: ((Result<DogResponseModel, Error>) -> Void)?
-    
-    // MARK: -
-    
     private let dogsURL = [
         "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         "https://cdn.pixabay.com/photo/2017/09/25/13/12/cocker-spaniel-2785074__340.jpg",
@@ -38,7 +34,6 @@ class DogsRemoteDataSourceMock: DogsRemoteDataSourceProtocol {
     ]
     
     func fetchDog(completion: @escaping (Result<DogResponseModel, Error>) -> Void) {
-        lastCompletion = completion
         completion(.success(DogResponseModel(notUrlString: dogsURL.randomElement()!)))
     }
 }
