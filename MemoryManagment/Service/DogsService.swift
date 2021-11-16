@@ -17,19 +17,17 @@ class DogsService: DogsServiceProtocol {
     
     // MARK: -
     
-    let dogsRemoteDataSource: DogsRemoteDataSourceProtocol
-    let dogsLocalDataSource: DogsLocalDataSourceProtocol
+    let serviceDataSourceAdapter: ServiceDataSourceAdapterProtocol
     
     // MARK: - Initializators
     
-    init(dogsRemoteDataSource: DogsRemoteDataSourceProtocol, dogsLocalDataSource: DogsLocalDataSourceProtocol) {
-        self.dogsRemoteDataSource = dogsRemoteDataSource
-        self.dogsLocalDataSource = dogsLocalDataSource
+    init(serviceDataSourceAdapter: ServiceDataSourceAdapterProtocol) {
+        self.serviceDataSourceAdapter = serviceDataSourceAdapter
     }
     
     // MARK: - DogsServiceProtocol Methods
     
     func fetchDog(completion: @escaping (Result<Dog, Error>) -> Void) {
-        dogsRemoteDataSource.fetchDog(completion: completion)
+        serviceDataSourceAdapter.fetchDogThrowAdapter(completion: completion)
     }
 }

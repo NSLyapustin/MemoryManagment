@@ -19,7 +19,8 @@
 		0596093A274303EC00D2B4CD /* DogsRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05960939274303EC00D2B4CD /* DogsRemoteDataSource.swift */; };
 		0596093C27430C4000D2B4CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0596093B27430C4000D2B4CD /* Main.storyboard */; };
 		05E766352743C1B20057A094 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 05E766342743C1B20057A094 /* Kingfisher */; };
-		05E766372743C7450057A094 /* DogsLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E766362743C7450057A094 /* DogsLocalDataSource.swift */; };
+		05E766392743F0D50057A094 /* ServiceDataSourceAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E766382743F0D50057A094 /* ServiceDataSourceAdapter.swift */; };
+		05E7663B2743F0F80057A094 /* DogResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E7663A2743F0F80057A094 /* DogResponseModel.swift */; };
 		05F9010B27418297007B6524 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9010A27418297007B6524 /* AppDelegate.swift */; };
 		05F9010D27418297007B6524 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9010C27418297007B6524 /* SceneDelegate.swift */; };
 		05F9010F27418297007B6524 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F9010E27418297007B6524 /* StartViewController.swift */; };
@@ -39,7 +40,8 @@
 		059609342742F76900D2B4CD /* DogsViewIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsViewIO.swift; sourceTree = "<group>"; };
 		05960939274303EC00D2B4CD /* DogsRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsRemoteDataSource.swift; sourceTree = "<group>"; };
 		0596093B27430C4000D2B4CD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		05E766362743C7450057A094 /* DogsLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsLocalDataSource.swift; sourceTree = "<group>"; };
+		05E766382743F0D50057A094 /* ServiceDataSourceAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDataSourceAdapter.swift; sourceTree = "<group>"; };
+		05E7663A2743F0F80057A094 /* DogResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogResponseModel.swift; sourceTree = "<group>"; };
 		05F9010727418297007B6524 /* MemoryManagment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryManagment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05F9010A27418297007B6524 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05F9010C27418297007B6524 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,7 +79,7 @@
 			children = (
 				059609272742F4F700D2B4CD /* DogsService.swift */,
 				05960939274303EC00D2B4CD /* DogsRemoteDataSource.swift */,
-				05E766362743C7450057A094 /* DogsLocalDataSource.swift */,
+				05E766382743F0D50057A094 /* ServiceDataSourceAdapter.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				0596092B2742F51700D2B4CD /* Dog.swift */,
+				05E7663A2743F0F80057A094 /* DogResponseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -228,10 +231,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				05F9010F27418297007B6524 /* StartViewController.swift in Sources */,
-				05E766372743C7450057A094 /* DogsLocalDataSource.swift in Sources */,
 				05F9010B27418297007B6524 /* AppDelegate.swift in Sources */,
 				059609202742F48E00D2B4CD /* DogsPresenter.swift in Sources */,
 				059609352742F76900D2B4CD /* DogsViewIO.swift in Sources */,
+				05E7663B2743F0F80057A094 /* DogResponseModel.swift in Sources */,
 				05F9010D27418297007B6524 /* SceneDelegate.swift in Sources */,
 				059609332742F75E00D2B4CD /* DogsPresenterIO.swift in Sources */,
 				0596092A2742F50200D2B4CD /* DogsModuleBuilder.swift in Sources */,
@@ -241,6 +244,7 @@
 				0596093A274303EC00D2B4CD /* DogsRemoteDataSource.swift in Sources */,
 				059609222742F49700D2B4CD /* DogsInteractor.swift in Sources */,
 				059609282742F4F700D2B4CD /* DogsService.swift in Sources */,
+				05E766392743F0D50057A094 /* ServiceDataSourceAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

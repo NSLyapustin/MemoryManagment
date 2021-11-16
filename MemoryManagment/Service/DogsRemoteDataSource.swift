@@ -9,12 +9,16 @@ import Foundation
 import UIKit
 
 protocol DogsRemoteDataSourceProtocol {
-    func fetchDog(completion: @escaping (Result<Dog, Error>) -> Void)
+    func fetchDog(completion: @escaping (Result<DogResponseModel, Error>) -> Void)
 }
 
 class DogsRemoteDataSourceMock: DogsRemoteDataSourceProtocol {
     
     // MARK: - Instance Properties
+    
+    // MARK: -
+    
+    private var lastCompletion: ((Result<DogResponseModel, Error>) -> Void)?
     
     // MARK: -
     
@@ -33,7 +37,8 @@ class DogsRemoteDataSourceMock: DogsRemoteDataSourceProtocol {
         "https://i.ytimg.com/vi/MPV2METPeJU/maxresdefault.jpg"
     ]
     
-    func fetchDog(completion: @escaping (Result<Dog, Error>) -> Void) {
-        completion(.success(Dog(urlString: dogsURL.randomElement()!)))
+    func fetchDog(completion: @escaping (Result<DogResponseModel, Error>) -> Void) {
+        lastCompletion = completion
+        completion(.success(DogResponseModel(notUrlString: dogsURL.randomElement()!)))
     }
 }
